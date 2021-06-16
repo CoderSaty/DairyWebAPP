@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+    <h1>Home</h1>
+    <p>
+        <%= homeStartContent%>
+    </p>
+
+    <%lessons.forEach((lesson)=>{%>
+        <div class="container">
+            <h1>
+                <%=lesson.heading %>
+            </h1>
+            <p>
+                <%=lesson.message.substring(0, 100).concat('...') %> <a href="/lessons/<%=lesson.heading%>">Read
+                        More</a>
+            </p>
+
+        </div>
+        <%})%>
+
+            <%- include("partials/footer"); -%>
