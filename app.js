@@ -53,6 +53,6 @@ app.get("/lessons/:lesson", (req, res) => {
     // console.log(req.params.lesson);
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("server started");
 })
